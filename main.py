@@ -2,7 +2,7 @@
 
 from tkinter import *
 from tkinter import messagebox
-
+import pyperclip
 
 root = Tk()
 root.title("محاسبه‌گر خسارت دارویی")
@@ -45,24 +45,44 @@ def calculate(e):
     evaluate()
 
     if is_empty(Bimar) and is_empty(Sazman) and is_empty(Bime):
+<<<<<<< HEAD
+        print( int((int(Azad.get()) + int(Exchange.get())) *0.9) )
+        ghabel_pardakht = int((int(Azad.get()) + int(Exchange.get())) *0.9)
+        pyperclip.copy(ghabel_pardakht)
+=======
         print( int(Azad.get()) + int(Exchange.get()) )
+>>>>>>> 44e3d95bcb8a9603285c7b3f6900dfe3e6fecdad
 
     elif is_empty(Bimar) and not is_empty(Sazman) and not is_empty(Bime):
         Bimar.set( int(Bime.get()) - int(Sazman.get()) )
         sahm_azad = int(Azad.get()) + int(Exchange.get())
         sahm_bimar = int(Bimar.get())
         ghabel_pardakht = int((sahm_azad*0.9) + sahm_bimar)
+<<<<<<< HEAD
+        pyperclip.copy(ghabel_pardakht)
+=======
         
+>>>>>>> 44e3d95bcb8a9603285c7b3f6900dfe3e6fecdad
 
     elif not is_empty(Bimar) and (not is_empty(Azad) or not is_empty(Exchange)):
         sahm_azad = int(Azad.get()) + int(Exchange.get())
         sahm_bimar = int(Bimar.get())
         ghabel_pardakht = int((sahm_azad*0.9) + sahm_bimar)
         print(int(ghabel_pardakht))
+<<<<<<< HEAD
+        pyperclip.copy(ghabel_pardakht)
+=======
+>>>>>>> 44e3d95bcb8a9603285c7b3f6900dfe3e6fecdad
 
     else:
         print("NOT ENOUGH SLICES")
 
+<<<<<<< HEAD
+    for val in values:
+        val.set("")
+
+=======
+>>>>>>> 44e3d95bcb8a9603285c7b3f6900dfe3e6fecdad
     
 
 
