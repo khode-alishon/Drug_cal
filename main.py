@@ -42,7 +42,9 @@ def calculate(e):
     evaluate()
 
     if not is_empty(Bimar) and not is_empty(Pay):
-        print("HALLALUAH!")
+        ghabel_pardakht = ((int(Pay.get()) - int(Bimar.get())) *0.9) + int(Bimar.get())
+        print(int(ghabel_pardakht))
+        pyperclip.copy(int(ghabel_pardakht))
     else:
         print("NOT ENOUGH SLICES")
 
